@@ -1,25 +1,25 @@
-/************************************************
-* Aspen Cristobal
-* CS3b - lab-LOREM_NUM - LOREM_ASSIGN
-* mm/dd/2026
-* -----------------------------------------------
-*   Purpose:
-* LOREM
-* -----------------------------------------------
-*   Psudo Code:
-* LOREM
-************************************************/
+// *********************************************************************
+// Aspen Cristobal
+// CS3b - lab-LOREM_NUM - LOREM_ASSIGN
+// mm/dd/2026
+// ---------------------------------------------------------------------
+// 	Purpose:
+// LOREM
+// ---------------------------------------------------------------------
+// 	Psudo Code:
+// LOREM
+// *********************************************************************
 .global _start  // Provide program starting address 
 
 _start: 
-    .EQU SYS_exit,  93  // exit() supervisor call code 
+	.EQU SYS_exit,  93  // exit() supervisor call code 
     
-    .text  // code section 
+	.text  // code section 
 
-    // terminate the program 
-    MOV X0, #0          // set return code to 0, all good 
-    MOV X8, #SYS_exit   // set exit() supervisor call code 
-    SVC 0               // call Linux to exit 
+	// terminate the program 
+	MOV X0, #0          // set return code to 0, all good 
+	MOV X8, #SYS_exit   // set exit() supervisor call code 
+	SVC 0               // call Linux to exit 
 
 .data  // data section
 
