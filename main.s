@@ -3,10 +3,13 @@
 // CS3b - lab-LOREM_NUM - LOREM_ASSIGN
 // mm/dd/2026
 // ---------------------------------------------------------------------
-// 	Purpose:
+// 	PURPOSE:
 // LOREM
 // ---------------------------------------------------------------------
-// 	Psudo Code:
+//	VARAIBLES:
+// LOREM
+// ---------------------------------------------------------------------
+// 	PSUEDOCODE:
 // LOREM
 // *********************************************************************
 .global _start  // Provide program starting address 
@@ -21,6 +24,6 @@ _start:
 	MOV X8, #SYS_exit   // set exit() supervisor call code 
 	SVC 0               // call Linux to exit 
 
-.data  // data section
+	.data  // data section
 
 .end   // end of program, optional but good practice 
