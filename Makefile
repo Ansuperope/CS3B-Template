@@ -2,11 +2,13 @@ AS = as
 LD = ld
 
 # Objects
-OBJS = LOREM.s
-TARGET = LOREM
+OBJS = main.s
+TARGET = main
 
 # Commands
 all: $(TARGET)
+gdb:
+	gdb ./$(TARGET).out
 
 run:
 	./$(TARGET).out
