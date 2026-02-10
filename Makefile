@@ -2,21 +2,28 @@ AS = as
 LD = ld
 
 # Objects
-OBJS = main.s
-TARGET = main
+OBJS = driver4-1.o # other output files
+TARGET = driver4-1
 
 # Commands
 all: $(TARGET)
-gdb:
-	gdb ./$(TARGET).out
 
 run:
 	./$(TARGET).out
 
+gdb:
+	gdb ./$(TARGET).out
+
 save:
 	git add .
 
+clean:
+	rm -f *.o *.out
+
 # Compile
 $(TARGET): $(OBJS)
-	$(AS) -g -o $(TARGET).o $(OBJS)
-	$(LD) -o  $(TARGET).out $(TARGET).o
+	$(LD) -o $(TARGET).out $(OBJS)
+
+# Link
+%.o: %.s
+	$(AS) -g -o $@ $<
