@@ -2,8 +2,8 @@ AS = as
 LD = ld
 
 # Objects
-OBJS = driver4-1.o # other output files
-TARGET = driver4-1
+TARGET = main
+OBJS = $(TARGET).o # other output files
 
 # Commands
 all: $(TARGET)
