@@ -1,14 +1,14 @@
 # CS3B-Template
 basic template for CS3b / Machine Language
 
-Reminders:
 
-Change git origin:
-```git remote -v                     // checks all remotes have```
-```git remote remove origin          // removes origin remote```
-```git remote add origin SSH_LINK    // replace SSH_LINK with github thing```
-```git branch -M main                // create main branch```
-```git push -u origin main           // will push to main branch```
+Run Program:
+1. Open Docker
+2. ```docker compose build```
+3. ```docker compose run arm64-dev```
+
+Termianal Should say something like this if its successful:
+```root@0819f99cfb8d:/workspace# ```
 
 Change Folder Name:
 ```mv CS3B-Template NEW_NAME```
