@@ -12,7 +12,8 @@
 # Authors: Kaveh Zare, modified and documented by Matthew Reese
 # Last Modified: 2/12/2025
 
-EXE := main.out  # Executable name
+MAIN := main
+EXE := $(MAIN).out  # Executable name
 #      ^^^^^^--- Change this to the name of the lab executable / library archive
 
 ASFLAGS := -g  # Flags for `as`; -g for debug symbols
@@ -56,11 +57,11 @@ $(EXE): $(OBJS) $(LIBS)
 
 # runs program
 run:
-	./$(TARGET).out
+	./$(MAIN).out
 
 # runs gdb
 gdb:
-	gdb ./$(TARGET).out
+	gdb ./$(MAIN).out
 
 # save to git - need to commit and push
 save:
