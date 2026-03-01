@@ -66,3 +66,11 @@ gdb:
 # save to git - need to commit and push
 save:
 	git add .
+
+# build docker
+build:
+	docker compose up -d --build
+
+# run docker
+docker:
+	docker compose run arm64-dev bash
