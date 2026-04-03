@@ -1,5 +1,5 @@
 # Creates a Arm64 environment
-FROM --platform=linux/arm64 ubuntu:22.04
+FROM ubuntu:22.04
 
 # States theres no frontend
 ENV DEBIAN_FRONTEND=noninteractive
@@ -7,10 +7,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Commands to run to build
 RUN apt-get update && \
     apt-get install -y \
-        build-essential \
+        binutils \
         gdb \
         strace \
-        ca-certificates && \
+        make && \
     rm -rf /var/lib/apt/lists/*
 
 # States folder to run
